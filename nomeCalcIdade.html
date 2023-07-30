@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e cálculo idade</title>
+</head>
+<body>
+    <script>
+    try {
+        var nome, ano_nasc, idade;
+        nome = window.prompt('Informe seu nome completo: ')
+        ano_nasc = parseInt(window.prompt('Informe seu ano de nascimento (1922 - 2022)'))
+        idade = 2022 - ano_nasc
+        if (ano_nasc != null && ano_nasc > 1922 && ano_nasc < 2021) {
+            idade = 2022 - ano_nasc
+            alert(nome + ' este ano você fez (ou fará) ' + idade + ' anos.')
+        } else {
+            throw new Error('Número inválido. Digite novamente.')
+        }
+    }catch(error){
+        alert(error)
+        alert('Valor inválido. Digite novamente.')
+    }  
+    </script>
+</body>
+</html>
